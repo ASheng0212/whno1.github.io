@@ -35,6 +35,20 @@
     <br/>
     <h3>轉動它-剩於轉動次數</h3>
     <h3>分享獲得轉動次數</h3>
-    
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script>
+     function postForm() {
+         var message = $("#message").val();
+         var url = "https://script.google.com/macros/s/AKfycbyohuqcILKdZVqSKfq6WgMIyFSwd-xYgUXfK9M5nu8w0LPeTg5odQ2dn-T24bTPcsj39Q/exec"; // Replace {YOUR_WEB_APP_URL} with the URL of your published web app from Google Apps Script
+     
+         $.ajax({
+           method: "GET",
+           url: url,
+           data: {"message": message}
+         });
+     
+         return false; // Prevent page from refreshing
+     }
+     </script>
    </body>
 </html>
